@@ -5,29 +5,29 @@
 class Supasecure < Formula
   desc "CLI for interacting with a Supasecure instance."
   homepage "https://github.com/train360-corp/homebrew-tap"
-  version "0.2.4"
+  version "0.2.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.4/supasecure_Darwin_x86_64.tar.gz",
+      url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.5/supasecure_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "d1c39ebeb12c825cfc53e49f9d174c9cf94a837c1176995af602def2ab823ed7"
+      sha256 "deaed2a281bcda501020fe5ed71d2b4743eade3458d3a1b9d0f4aebf4bb67f76"
 
       def install
         bin.install "supasecure"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.4/supasecure_Darwin_arm64.tar.gz",
+      url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.5/supasecure_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "0bfa303f054fd381a08523d173a12f45148541d4ed9e3dd576fd0d98e81292e5"
+      sha256 "1779046a0d2c22b9e6569813e2e26d3b72ac8405e8e86c9b71620e093a8cab28"
 
       def install
         bin.install "supasecure"
@@ -38,12 +38,12 @@ class Supasecure < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.4/supasecure_Linux_x86_64.tar.gz",
+        url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.5/supasecure_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "c6138b6f28ab018eac249a46617d5e211e3fcaf9a12e0c52257fbeed145c6919"
+        sha256 "e0a3998319a4e09da96f8a76d7f13b52a90f8ad1a7e8cf5946542fe24d85dfdf"
 
         def install
           bin.install "supasecure"
@@ -52,12 +52,12 @@ class Supasecure < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.4/supasecure_Linux_arm64.tar.gz",
+        url "https://github.com/train360-corp/homebrew-tap/releases/download/v0.2.5/supasecure_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "43c24f8128193e66eeb4cb54258ee98597e48fb10e177f2c15a7d0783bef323d"
+        sha256 "bee3ad43c03d4fda0b256b0e1cd66b5550e804df2b8f0c41338e368924184d4e"
 
         def install
           bin.install "supasecure"
