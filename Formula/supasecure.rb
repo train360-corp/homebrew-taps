@@ -5,29 +5,29 @@
 class Supasecure < Formula
   desc "CLI for interacting with a Supasecure instance."
   homepage "https://github.com/train360-corp/supasecure"
-  version "1.15.7"
+  version "1.15.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/train360-corp/supasecure/releases/download/v1.15.7/supasecure_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/train360-corp/supasecure/releases/download/v1.15.8/supasecure_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "faf5e231379ed0e365b77ce381fa1b06971ad372d44581ce0fec736d9ebb5532"
+      sha256 "5847ca27859daaf31674d0fb6fb1b74238d68a6760a02bf491106b5d6400bea7"
 
       def install
         bin.install "supasecure"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/train360-corp/supasecure/releases/download/v1.15.7/supasecure_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/train360-corp/supasecure/releases/download/v1.15.8/supasecure_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "7334d8f469c8969ab64dd200bc894d6ce02273f0d688ba0a45841785ffd1c3bb"
+      sha256 "6982685fa38a363a33344c27d24d2dbb15b6f3f37b78ea79e7742df84a5cb857"
 
       def install
         bin.install "supasecure"
@@ -38,12 +38,12 @@ class Supasecure < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/train360-corp/supasecure/releases/download/v1.15.7/supasecure_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/train360-corp/supasecure/releases/download/v1.15.8/supasecure_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "b5049e2ee0fe80d927da9d7926f7903157c0f9e946314fae7794c97943112ce0"
+        sha256 "3d6e4eca1c83173f72cc5a48a2509e5f86202848c373e3ae526d279fe26b4592"
 
         def install
           bin.install "supasecure"
@@ -52,12 +52,12 @@ class Supasecure < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/train360-corp/supasecure/releases/download/v1.15.7/supasecure_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/train360-corp/supasecure/releases/download/v1.15.8/supasecure_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "dcdf242dc501adbc5954c0df4f3a67186dc3613fba2cc91c9163787e56b8e52b"
+        sha256 "9fa83d05be65a4e24eaa59ebba409046eca4f06118d57524acd1f286fcfdbce4"
 
         def install
           bin.install "supasecure"
