@@ -5,29 +5,29 @@
 class Projconf < Formula
   desc "ProjConf CLI."
   homepage "https://github.com/train360-corp/projconf"
-  version "1.3.5"
+  version "1.3.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/train360-corp/projconf/releases/download/v1.3.5/projconf_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/train360-corp/projconf/releases/download/v1.3.6/projconf_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "fc75e93d5c1100bc7485e3439c36419294f1d942307da98e948094b49658b339"
+      sha256 "3fa74b8137af25f5e68e8618fe79b0e5bc337fb7c74843b13bd717fd4acd1a9b"
 
       def install
         bin.install "projconf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/train360-corp/projconf/releases/download/v1.3.5/projconf_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/train360-corp/projconf/releases/download/v1.3.6/projconf_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "046b6f30f778f5555160e33f93abb44aa343715eb9d23b8190036e8711d0c6b9"
+      sha256 "ac2e0e6ae61bccabe10f4d2c824a26df3587447682e3aba35ccf2231f6c46054"
 
       def install
         bin.install "projconf"
@@ -37,23 +37,23 @@ class Projconf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/train360-corp/projconf/releases/download/v1.3.5/projconf_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/train360-corp/projconf/releases/download/v1.3.6/projconf_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "e78bf384036fb8ca65fda26a4bdca0b48922656eb2d93d3c758a339ef84d4cc6"
+      sha256 "fc2be87fc389c0b3b1155e695aa8e02367182818d021f12a92ee76a24042e02d"
       def install
         bin.install "projconf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/train360-corp/projconf/releases/download/v1.3.5/projconf_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/train360-corp/projconf/releases/download/v1.3.6/projconf_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "5a8086f7697317fd85a0a40c80105a830130ffb9d473628a9811845a7d70cd5f"
+      sha256 "e381677d801ec605eec47e4bf44f9e3743f71561e13a249b02ce1f8948a03f55"
       def install
         bin.install "projconf"
       end
